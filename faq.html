@@ -1,86 +1,92 @@
-<html xml:lang="en" lang="en"> 
- 
-<head> 
-  <title>Project Bismark</title> 
-  <link rel="stylesheet" type="text/css" href="/static/style.css" /> 
-  <meta name="Author" content="Nick Feamster" /> 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head> 
- 
- 
-<body> 
- 
-<a href="/"><img height=150 src="static/bismark.png" /></a>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<h3>Frequently Asked Questions</h3>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Network Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="static/style.css"
+    media="all" />
 
-<ul>
-<li> <b>What does the Bismark gateway do?</b> For now (and yes, we hope to
-continue this as long as we can sustain it), we will be happy to ship
-you an OpenWRT box with the Bismark firmware.  The firmware currently
-takes only active measurements of your access link performance.  We are
-working on a portal through which you can view your measurements (at
-networkdashboard.org), but that is still under development.  In the
-future, depending on user demand, we would like to develop some other
-applications for the box, such as a visualization that helps users
-better manage usage caps, better interfaces for QoS and security in the
-home, etc. Those things are all in the works.  Please submit feature
-requests! </li>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7029796-4']);
+    _gaq.push(['_trackPageview']);
 
-<li> <b>When can I get a device?</b> We are in the midst of our first pilot
-deployment, of about 8-10 users in Cape Town, South Africa.  If we can swing a
-deployment here, we figure anything is possible.  We are hoping to send you
-gateway devices with the Bismark firmware by mid-to-late August.  This is
-contingent on no catastrophes in the pilot deployment, and our ability to
-satisfy the volume of requests.  At present, the requests for devices far
-outstrips our capability to satisfy the requests, so we may not be able to
-satisfy all requests.  Please stay tuned to this list for announcements.</li> 
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+          'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
 
-<li> <b>How will you select participants?</b> We are looking for participants
-in regions close to <a href="http://measurementlab.net">measurement lab</a>
-servers.  We will initially ship gateways to users in these regions that allow
-us to achieve reasonable coverage across Internet service providers and service
-plans.  We are also looking for participants in "interesting" places (e.g.,
-foreign countries, developing regions).</li>
+<body>
+<body>
+<div id="container">
+    <div class="header">
+        <img id="logo" src="static/bismark.gif" alt="BISmark logo" />
+        <div id="h1_container">
+            <h1>BISmark FAQs</h1>
+        </div>
+    </div>
 
-<li> <b>Can I help develop or test?</b> Yes.  Please see
-  <a href="http://redmine.projectbismark.net">redmine.projectbismark.net</a>
-  for details about how; please feel free to 
-  register on that site. </li>
+    <h3>What does the Bismark gateway do?</h3>
+    <p>For now (and yes, we hope to continue this as long as we can sustain
+    it), we will be happy to ship you an OpenWRT box with the Bismark firmware.
+    The firmware currently takes only active measurements of your access link
+    performance.  We are working on a portal through which you can view your
+    measurements (at networkdashboard.org), but that is still under
+    development.  In the future, depending on user demand, we would like to
+    develop some other applications for the box, such as a visualization that
+    helps users better manage usage caps, better interfaces for QoS and
+    security in the home, etc. Those things are all in the works.  Please
+    submit feature requests!</p>
 
-<li> <b>Who is funding this effort?</b> We are currently funded by the
-  National Science Foundation, primarily.  We have funding from Google
-  once the NSF funding runs out.  If you would like to donate to the
-  project, or know of potential donors, please let us know!</li>
+    <h3>When can I get a device?</h3>
+    <p>At present, the requests for devices far outstrips our
+    capability to satisfy the requests, so we may not be able to satisfy all
+    requests. Please stay tuned for announcements.</p>
 
-<li> <b>Who are you, and how did this project start?</b> Srikanth
-  Sundaresan is a Ph.D. student, and Nick Feamster is an associate
-  professor, both at Georgia Tech.  Dave Taht is our fearless developer
-  and project manager.  This project started when we wanted to learn
-  more about properties of Internet access links and realized that there
-  wasn't much good data about it available.  We wanted to develop an
-  open-source platform for taking these kinds of measurements.  As we've
-  been developing the platform, we've been realizing the general
-  usefulness of having a programmable gateway in the home.  More people
-  who have contributed are
-  listed <a href="http://projectbismark.net/credits.html">here</a>. 
+    <h3>How will you select participants?</h3>
+    <p>We are looking for participants in regions close to <a
+    href="http://measurementlab.net">measurement lab</a> servers.  We will
+    initially ship gateways to users in these regions that allow us to achieve
+    reasonable coverage across Internet service providers and service plans.
+    We are also looking for participants in &quot;interesting&quot; places
+    (e.g., foreign countries, developing regions).</p>
 
+    <h3>Can I help develop or test BISmark?</h3>
+    <p>Yes. Please contact us at bismark-core@projectbismark.net</p>
+
+    <h3>Who is funding this effort?</h3>
+    <p> We are currently funded by the National Science Foundation, primarily.
+    We have funding from Google once the NSF funding runs out.  If you would
+    like to donate to the project, or know of potential donors, please let us
+    know!</p>
+
+    <h3>How did this project start?</h3>
+    <p>This project started when we wanted to learn more about properties of
+    Internet access links and realized that there wasn't much good data about
+    it available.  We wanted to develop an open-source platform for taking
+    these kinds of measurements.  As we've been developing the platform, we've
+    been realizing the general usefulness of having a programmable gateway in
+    the home.</p>
+
+    <h3>I have a question you didn't answer!</h3>
+    <p>Please contact us at bismark-core@projectbismark.net</p>
 </ul>
- 
-<hr /> 
-<p class="footnote"> 
-  <a href="/">Home</a> | 
-  <a href="http://networkdashboard.org/">Network Dashboard</a> |
-  <a href="http://about.projectbismark.net/">BISMark</a> |
-  <a href="credits.html">Credits</a> |
-  <a href="http://gtnoise.net/">GTNoise</a> 
-</p> 
- 
-<center>
-<img height=40 src="static/google.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height=40 src="static/nsf.jpg">
-</center>
-
- 
-</body> 
-</html> 
-
+</p>
+</div>
+<p class="notes">
+    <a href="/">Home</a> |
+    <a href="http://networkdashboard.org/">Network Dashboard</a> |
+    <a href="http://about.projectbismark.net/">BISMark</a> |
+    <a href="credits.html">Credits</a> |
+    <a href="http://gtnoise.net/">GTNoise</a>
+</p>
+</body>
+</html>

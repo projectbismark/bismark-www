@@ -1,86 +1,147 @@
-body, html { 
-  color: #000000;
-  background: #ffffff;
-  padding-left: 6.5em;
-  padding-right:6.5em;
+body {
+    text-align: center;
+    background-color: #ddd;
+    font-family: arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12pt;
+    color: #333;
 }
-
-img {  
-  border-style: none;
-}
-
-h3 {
-        font-size: 145% ;
-        font-weight: bold ;
-        color: #4A4A3C ;
-        color-grey: #bbbbbb
-}
-
 
 a {
-        text-decoration: none ;
-        color: #991133 ;
-	background: #ffffff;	
+    color: #0091C9;
 }
 
-a:hover {
-        text-decoration: underline
+a:visited {
+    color: #00609C;
 }
 
-body {
-        font-family: arial, sans-serif ;
-        background-color: #ffffff ;
-        font-size: 9pt ;
-        margin: 25
+a.nocolor {
+    color: inherit;
 }
 
-ul {
-	list-style-type: none;
-	padding-left: 2.5em;
+a.nocolor:visited {
+    color: inherit;
+}
+
+h2 a {
+    color: #0091C9;
+}
+
+h2 a:visited {
+    color: #0091C9;
+}
+
+#container {
+    width: 680px;
+    margin: 0px auto;
+    text-align: left;
+    padding: 3em;
+    background-color: #fff;
+}
+
+div.header {
+    margin: 0px;
+    padding: 0px;
+    margin-top: -1em;
+    margin-bottom: 2em;
+}
+
+#h1_container {
+    margin: 0px;
+    padding: 0px;
+    display: table;
+    height: 140px;
+}
+
+h1 {
+    color: #0091C9;
+    font-size: 2.5em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#logo {
+    margin-bottom: 1em;
+    margin-right: 2em;
+    float: left;
+}
+
+p {
+    font-family: arial;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #333;
+}
+
+p.notes {
+    font-size: 0.9em;
+    font-style: italic;
+    line-height: 1.1em;
+    color: #666;
+    margin-top: 0.25em;
+}
+
+.note_well {
+    font-weight: bold;
+    background-color: #eef0ff;
+    padding: 0.5em;
+    text-align: center;
+    border: 0.05em solid #00609C;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+}
+
+ul, ol {
+    font-family: arial;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #333;
 }
 
 li {
-	padding-bottom: 5px
+    margin: 1em 0em;
 }
 
-
-DIV.projects ul {
-	list-style-type: circle;
-	padding-left: 2.5em;
+ul.linklist {
+    margin: 0px;
+    padding: 0px;
 }
 
-DIV.projects li {
-	padding-bottom: 0px;
+ul.linklist li {
+    display: block;
+    margin: 1em 0em;
 }
 
-
-DIV.traps a {
-   background: #ffffff;
-   color: #ffffff;
-   visited: #ffffff;
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
 }
 
-
-
-
-a:visited { 
-  background: #ffffff;
-  color:  #408860;
+.main {
+    clear: both;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
-
-p.lastupdated { 
-  font-size: 70%;
-  font-style: italic;
-  margin-bottom: 0;
+.main-left {
+    width: 45%;
+    float: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0px
 }
 
-p.contact {
-  margin-top: 0;
-  font-size: 70%;
-}
-
-p.footnote {
-  margin-top: 0;
-  font-size: 85%;
+.main-right {
+    width: 45%;
+    float: right;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0px;
 }

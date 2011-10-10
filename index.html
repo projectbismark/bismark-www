@@ -1,159 +1,192 @@
-<html xml:lang="en" lang="en"> 
- 
-<head> 
-  <title>Network Dashboard</title> 
-  <link rel="stylesheet" type="text/css" href="/static/style.css" /> 
-  <meta name="Author" content="Nick Feamster" /> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<script type="text/javascript">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Network Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="static/style.css"
+    media="all" />
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7029796-4']);
-  _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7029796-4']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+          'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
 
-</script>
-</head> 
- 
- 
-<body> 
- 
-<a href="/"><img height=150 src="static/bismark.png" /></a>
+<body>
+<body>
+<div id="container">
+    <div class="header">
+        <img id="logo" src="static/bismark.gif" alt="BISmark logo" />
+        <div id="h1_container">
+            <h1>Welcome to Project BISmark</h1>
+        </div>
+    </div>
 
+    <p> BISMark is the Broadband Internet Service BenchMARK. It is a project
+    led by <a href="http://www.gtnoise.net/">Georgia Tech</a> and the
+    <a href="http://www.grid.unina.it/Traffic/">University of Napoli Federico
+    II </a> to develop an OpenWRT-based platform for performing measurements of
+    ISP performance, as well as traffic inside the home. You can use BISMark to
+    measure the performance of their ISP, visualize and monitor traffic
+    patterns from your users and devices inside your home network, and manage
+    your usage caps.</p>
 
-<h3>Welcome to Project Bismark</h3> 
- 
-<p> BISMark is the Broadband Internet Service BenchMARK. It is a project led by
-<a href="http://www.gtnoise.net/">Georgia Tech</a> and the <a
-href="http://www.grid.unina.it/Traffic/">University of Napoli Federico II</a>
-to develop an OpenWRT-based platform for performing measurements of ISP
-performance, as well as traffic inside the home. You can use BISMark to measure
-the performance of their ISP, visualize and monitor traffic patterns from your
-users and devices inside your home network, and manage your usage caps.  </p>
+    <p>Follow our work on the
+    <a href="http://projectbismark.posterous.com">Project BISmark blog</a>.</p>
 
-<center>
-<p>
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/irqeFdly-UY&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/v3hjp8EEJKs&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+    <h2>Learn more about BISmark</h2>
+
+    <p style="text-align: center">
+    <object width="425" height="344">
+    <param name="movie"
+    value="http://www.youtube.com/v/irqeFdly-UY&hl=en&fs=1"></param>
+    <param name="allowFullScreen" value="true"></param>
+    <embed src="http://www.youtube.com/v/v3hjp8EEJKs&hl=en&fs=1"
+    type="application/x-shockwave-flash" allowfullscreen="true" width="425"
+    height="344"></embed></object>
+    </p>
+
+    <p>Running BISMark is easy!  Just follow these steps:</p>
+    <ol>
+        <li><b>Get a BISMark Router.</b>
+        Currently, we are working with the<a
+        href="http://netgear.com/home/products/wirelessrouters/high-performance/WNDR3700.aspx">
+        NetGear WNDR3700v2</a> router. <a href="signup.html"><b>Sign up
+        here.</b></a></li>
+        <li>Plug it into your cable or DSL modem. You can
+        simply replace your existing home router with BISMark.</li>
+        <li>View your data! (the interface is under development, below)</li>
+    </ol>
+
+    <p>For more information on how to install BISMark on your own router,
+    please see our <a href="http://wiki.projectbismark.net/">project wiki</a>.
+    </p>
+
+    <h2>More Information</h2>
+
+    <ul>
+        <!--<li><a href="http://lists.projectbismark.net/listinfo/bismark-users">
+          Mailing List</a></li>-->
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+    </ul>
+
+    <h2>Software</h2>
+    <ul>
+        <li><a href="https://github.com/bismark-devel">BISmark Github page</a>
+            </li>
+        <li><a href="http://redmine.projectbismark.net">
+            BISMark Developers Site</a>, the BISmark development project
+            management/issue tracker tool.</li>
+        <li><a href="http://networkdashboard.org">Network Dashboard</a>,
+        a web application showing historical performance data for BISmark users
+        </li>
+        <!--
+        <li><a href="http://projectkermit.blogspot.com/">ProjectKermit Blog</a>
+        (under development) - a front-end for BISMark users</li>
+        -->
+    </ul>
+
+    <h2>Papers and Talks</h2>
+
+    <h3>Talks</h3>
+    <ul>
+        <li> <a
+        href="http://projectbismark.net/static/talks/bismark-google2011.ppt">
+        The BISMark Project</a>.  Overview talk given at Google NYC, May
+        2011.</li>
+    </ul>
+
+    <h3>Papers</h3>
+    <ul>
+        <li><em><a
+        href="http://conferences.sigcomm.org/sigcomm/2011/papers/sigcomm/p134.pdf">
+        Broadband Internet Performance: A View From the Gateway</a></em>
+        </br>S.  Sundaresan, W. de Donato, N. Feamster, R. Teixeira, S.
+        Crawford, A. Pescape<br /><em>ACM SIGCOMM</em><br /> Toronto, Ontario,
+        Canada.  August 2011.</li>
+
+        <li><em><a
+        href="http://conferences.sigcomm.org/sigcomm/2011/papers/homenets/p13.pdf">
+        Helping Users Shop for ISPs with Internet Nutrition Labels</a></em>
+        <br />S. Sundaresan, N. Feamster, R. Teixeira, A. Tang, W.
+        Edwards, R. Grinter, M. Chetty, W. de Donato<br /><em>ACM SIGCOMM
+        HomeNets Workshop</em><br />Toronto, Ontario, Canada.  August 2011.
+        </li>
+
+        <li><em><a
+        href="http://www.sigcomm.org/sites/default/files/ccr/papers/2011/January/1925861-1925875.pdf">
+        Instrumenting Home Networks</a></em><br /> K. Calvert, W. K.  Edwards,
+        N. Feamster, R. Grinter, Y. Deng, X. Zhou<br /> <em>ACM SIGCOMM
+        Computer Communications Review</em><br /> Volume 41, Issue 1, January
+        2011.</li>
+    </ul>
+
+    <h2>People</h2>
+
+    <ul>
+        <li><a href="http://www.cc.gatech.edu/~ssundar3/">
+            Srikanth Sundaresan</a></li>
+        <li><a href="http://wpage.unina.it/walter.dedonato/">
+            Walter de Donato</a></li>
+        <li>Abhishek Jain</li>
+        <li><a href="http://www.cc.gatech.edu/~feamster/">
+            Nick Feamster</a> </li>
+        <li><a href="http://www.cc.gatech.edu/~marshini/">
+            Marshini Chetty</a> </li>
+        <li><a href="http://www.cc.gatech.edu/~keith/">
+            Keith Edwards</a> </li>
+        <li><a href="http://wpage.unina.it/pescape/">
+            Antonio Pescape</a></li>
+        <li><a href="http://www.stevewoodrow.com/">
+            Stephen Woodrow</a></li>
+        </ul>
+
+    <p>We are also grateful to many other <a
+    href="contrib.html">contributors</a> who are supporting the project
+    through bug fixes, patches, research, and other improvements.  We are
+    indebted to the OpenWRT development team for their continuing support of
+    BISMark.</p>
+
+    <h2>Other Information</h2>
+
+    <ul>
+        <li><a href="http://connectionmanagement.org/">
+            Georgia Tech Networking Blog</a>, 
+            Nick Feamster's blog; some updates here</li>
+        <li><a href="http://www.samknows.com">SamKnows</a>,
+            a partner commercial organization performing similar testing</li>
+        <li><a href="http://www.measurementlab.org">Measurement Lab</a>,
+            a partner hosting measurement servers for BISMark</li>
+        <li><a href=" http://www.grid.unina.it/Traffic/">
+            UNINA Network Tools</a></li>
+    </ul>
+
+    <h2>Funding</h2>
+
+    <p style="text-align: center;">
+        <img height=40 src="static/google.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="static/nsf.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="static/intel.jpg" style="margin: 0 20px 0 20px">
+    </p>
+</div>
+<p class="notes">
+    <a href="/">Home</a> |
+    <a href="http://networkdashboard.org/">Network Dashboard</a> |
+    <a href="http://about.projectbismark.net/">BISMark</a> |
+    <a href="credits.html">Credits</a> |
+    <a href="http://gtnoise.net/">GTNoise</a>
 </p>
-</center>
-
-<!--- <p><b>Watch a <a href="video.html">video that explains --
-  --BISMark</a>.</b></p> --->
-
-<p>Running BISMark is easy!  Just follow these steps:</p>
-<ol>
-<li><b>Get a BISMark Router.</b> Currently, we are shipping the <a href="http://netgear.com/home/products/wirelessrouters/high-performance/WNDR3700.aspx">NetGear WNDR 3700v2</a> router. <a href="signup.html"><b>Sign up here.</b></a></li> 
-<li>Plug it into your cable or DSL modem.  You can simply replace your existing home router with BISMark.</li>
-<li>View your data! (the interface is under development, below)</li>
-</ol>
-
-<p>For more information on how to install BISMark on your own router, please see our <a href="http://wiki.projectbismark.net/">project wiki</a>.  </p>
-
-<h4>More Information</h4>
-
-<ul>
-<li>
-  <a href="http://lists.projectbismark.net/listinfo/bismark-users">Mailing
-     List</a> </li> 
-<li> <a href="./faq.html">Frequently Asked Questions</a> </li>
-</ul> 
-
-<h4>Software</h4> 
-<ul> 
-<li> <a href="http://redmine.projectbismark.net">BISMark Developers Site</a> - Development of the custom OpenWRT firmware. </li> 
-<li> <a href="http://networkdashboard.org">Network Dashboard</a> (under
-  development) - Front-end user interface showing historical
-  performance data </li>
-<li> <a href="http://projectkermit.blogspot.com/">ProjectKermit Blog</a>
-  (under development) - a front-end for BISMark </li>
-</ul> 
- 
-<h4>Papers and Talks</h4> 
-
-<i>Talks</i>
-<ul> 
-<li> <a href="http://projectbismark.net/static/talks/bismark-google2011.ppt">The BISMark Project</a>.  Overview talk given at Google NYC, May 2011.
-</ul> 
- 
-<i>Papers</i>
-
-<ul>
-
-
-<li>
-<em>Broadband Internet Performance: A View From the Gateway</em> </br>
-S.
-Sundaresan, W. de Donato, N. Feamster, R. Teixeira, S.
-Crawford, A. Pescape <br />
-<em>ACM SIGCOMM</em><br />
-Toronto, Ontario, Canada.  August 2011. <em>To Appear.</em><br />
-</li>
-
-<li>
-<em>Helping Users Shop for ISPs with Internet Nutrition Labels</em><br
-/>
-S. Sundaresan, N. Feamster, R. Teixeira, A. Tang, W. Edwards,
-R. Grinter, M. Chetty, W. de Donato <br />
-<em>ACM SIGCOMM HomeNets Workshop</em><br />
-Toronto, Ontario, Canada.  August 2011. <em>To Appear.</em><br />
-</li>
-
-<li>
-<em>Instrumenting Home Networks</em><br />
-K. Calvert, W. K. Edwards, N. Feamster, R. Grinter, Y. Deng, X. Zhou<br
-/>
-<em>ACM SIGCOMM Computer Communications Review</em><br />
-Volume 41, Issue 1, January 2011.
-[<a href="http://portal.acm.org/citation.cfm?id=1925875">.pdf</a>]
-
-
-</ul>
- 
-<h4>People</h4> 
- 
-<ul> 
-<li> <a href="http://www.cc.gatech.edu/~ssundar3/">Srikanth Sundaresan</a></li> 
-<li> <a href="http://wpage.unina.it/walter.dedonato/">Walter de Donato</a></li> 
-<li> Abhishek Jain </li> 
-<li> <a href="http://www.cc.gatech.edu/~feamster/">Nick Feamster</a> </li> 
-<li> <a href="http://www.cc.gatech.edu/~marshini/">Marshini Chetty</a> </li> 
-<li> <a href="http://www.cc.gatech.edu/~keith/">Keith Edwards</a> </li> 
-<li> <a href="http://wpage.unina.it/pescape/">Antonio Pescape</a></li>
-<li> <a href="http://www.stevewoodrow.com/">Stephen Woodrow</a></li>
-</ul> 
-
-<p>We are also grateful to many
-  other <a href="credits.html">collaborators</a> who are supporting the
-  project through bug fixes, patches, research, and other improvements.  We are indebted to the OpenWRT development team for their continuing support of BISMark.</p> 
- 
-<h4>Other Information</h4>
-
-<ul>
-<li> <a href="http://connectionmanagement.org/">Georgia Tech Networking Blog</a> (Prof. Feamster's blog; some updates here)</li>
-<li> <a href="http://www.samknows.com">SamKnows</a> (a partner commercial organization performing similar testing)
-<li> <a href="http://www.measurementlab.org">Measurement Lab</a> (a
-  partner hosting measurement servers for BISMark)</li>
-<li>  <a href=" http://www.grid.unina.it/Traffic/">UNINA Network Tools</a> </li>
-</ul>
-
-<hr /> 
-<p class="footnote"> 
-  <a href="/">Home</a> | 
-  <a href="http://networkdashboard.org/">Network Dashboard</a> |
-  <a href="http://about.projectbismark.net/">BISMark</a> |
-  <a href="credits.html">Credits</a> |
-  <a href="http://gtnoise.net/">GTNoise</a> 
-</p> 
- 
-<center> 
-<img height=40 src="static/google.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height=40 src="static/nsf.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height=40 src="static/intel.jpg"> 
-</center> 
- 
- 
-</body> 
-</html> 
+</body>
+</html>
