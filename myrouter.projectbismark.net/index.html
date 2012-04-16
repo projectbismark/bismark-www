@@ -5,8 +5,9 @@
 <head>
     <title>Uh oh, something went wrong | myrouter.projectbismark.net</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="static/style.css"
+    <link rel="stylesheet" type="text/css" href="/static/style.css"
     media="all" />
+    <script src="/static/jquery-1.7.2.min.js"></script>
 
     <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -25,10 +26,9 @@
 </head>
 
 <body>
-<body>
 <div id="container">
     <div class="header">
-        <img id="logo" src="static/sad_bismark.gif" alt="Sad BISmark logo" />
+        <img id="logo" src="/static/sad_bismark.gif" alt="Sad BISmark logo" />
         <div id="h1_container">
             <h1><span style="color: #aaa;">Uh oh,<br />something went wrong.</span></h1>
         </div>
@@ -36,6 +36,17 @@
 
     <p>This URL only works when accessed from a home network with a
     <a href="http://projectbismark.net">BISmark</a> gateway router.</p>
+
+    <p class="nojs">Don't Panic! First, try clicking on these links to locate
+    your BISmark router (we try this automatically if javascript is enabled in
+    your browser):
+        <ul>
+        <li><a href="http://myrouter.local" target="_blank">
+            http://myrouter.local</a></li>
+        <li><a href="http://192.168.142.1" target="_blank">
+            http://192.168.142.1</a></li>
+        </ul>
+    </p>
 
     <p>Did you expect to see your BISmark router's web page? Make sure to
     check the following:
@@ -54,5 +65,54 @@
     <p>If you don't have a BISmark router, learn how to get one at
     <a href="http://projectbismark.net">http://projectbismark.net</a>.</p>
 </div>
+
+<div id="overlay">
+    <div>
+        <h2>Locating your BISmark router...</h2>
+    </div>
+</div>
+
+<script>
+    $('#overlay').css('display', 'block');
+    $('.nojs').css('display', 'none');
+
+    var hosts = ['myrouter.projectbismark.net', 'myrouter.local', '192.168.142.1'];
+    ajax_error = (function(){
+        var num_errors = 0;
+        var max_errors = hosts.length;
+        return function(jqXHR, textStatus, errorThrown) {
+            num_errors++;
+            if(num_errors >= max_errors) {
+                $('#overlay').css('display', 'none');
+            }
+        }
+    })()
+    for (var idx in hosts) {
+        (function() {
+            var theurl = "http://" + hosts[idx] + "/cgi-bin/projectbismark-verify";
+            $.ajax({
+                type: "GET",
+                url: theurl,
+                timeout: 1000,
+                error: ajax_error,
+                success: function(data, textStatus, jqXHR) {
+                    var router_ip = $.trim(data);
+                    if (router_ip.match(/^(\d+\.){3}\d+$/) != null ) {
+                        $.ajax({
+                            type: 'GET',
+                            url: "http://" + router_ip + "/cgi-bin/projectbismark-verify",
+                            error: ajax_error,
+                            success: function(data, textStatus, jqXHR) {
+                                window.location = "http://" + router_ip;
+                            }
+                        });
+                    } else {
+                        ajax_error(null,null,null);
+                    }
+                }
+            });
+        })();
+    }
+</script>
 </body>
 </html>
