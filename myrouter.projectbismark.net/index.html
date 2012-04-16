@@ -37,9 +37,9 @@
     <p>This URL only works when accessed from a home network with a
     <a href="http://projectbismark.net">BISmark</a> gateway router.</p>
 
-    <p>Did you expect to see your BISmark router's web page? Make sure to
+    <p class="js">Did you expect to see your BISmark router's web page? Make sure to
     check the following:
-        <ul>
+        <ul class="js">
         <li>Are you at home and connected to the BISmark wired or wireless
             network?</li>
         <li>Have you upgraded your BISmark router firmware since 6 April 2012?
@@ -51,14 +51,28 @@
         </ul>
     </p>
 
-    <p class="nojs"><em>Don't Panic!</em> First, try clicking on these links to
-    locate your BISmark router (we try this automatically if javascript is
-    enabled in your browser):
+    <p class="nojs">Did you expect to see your BISmark router's web page?
+    <em>Don't Panic!</em> First, try clicking on these links to locate your
+    BISmark router (we try this automatically if javascript is enabled in your
+    browser):
         <ul class="nojs">
         <li><a href="http://myrouter.local" target="_blank">
             http://myrouter.local</a></li>
         <li><a href="http://192.168.142.1" target="_blank">
             http://192.168.142.1</a></li>
+        </ul>
+    </p>
+
+    <p class="nojs">Still no luck? Make sure to check the following:
+        <ul class="nojs">
+        <li>Are you at home and connected to the BISmark wired or wireless
+            network?</li>
+        <li>Have you upgraded your BISmark router firmware since 6 April 2012?
+            This URL only works with router firmware released after that
+            date.</li>
+        <li>Have you reconfigured your BISmark router to be a bridge, or
+            otherwise changed its network configuration? This URL may not work
+            with other router configurations.</li>
         </ul>
     </p>
 
@@ -75,8 +89,11 @@
 <script>
     $('#overlay').css('display', 'block');
     $('.nojs').css('display', 'none');
+    $('.js').css('display', 'block');
 
-    var hosts = ['myrouter.projectbismark.net', 'myrouter.local', '192.168.142.1'];
+    var hosts = ['myrouter.projectbismark.net',
+                 'myrouter.local',
+                 '192.168.142.1'];
     ajax_error = (function(){
         var num_errors = 0;
         var max_errors = hosts.length;
@@ -89,7 +106,8 @@
     })()
     for (var idx in hosts) {
         (function() {
-            var theurl = "http://" + hosts[idx] + "/cgi-bin/projectbismark-verify";
+            var theurl = ("http://" + hosts[idx] +
+                          "/cgi-bin/projectbismark-verify");
             $.ajax({
                 type: "GET",
                 url: theurl,
@@ -100,7 +118,8 @@
                     if (router_ip.match(/^(\d+\.){3}\d+$/) != null ) {
                         $.ajax({
                             type: 'GET',
-                            url: "http://" + router_ip + "/cgi-bin/projectbismark-verify",
+                            url: ("http://" + router_ip +
+                                  "/cgi-bin/projectbismark-verify"),
                             error: ajax_error,
                             success: function(data, textStatus, jqXHR) {
                                 window.location = "http://" + router_ip;

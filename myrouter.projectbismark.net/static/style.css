@@ -42,6 +42,14 @@ h2 a:visited {
     background-color: #fff;
 }
 
+.nojs {
+    display: block;
+}
+
+.js {
+    display: none;
+}
+
 #overlay {
     display: none;
     position: absolute;
