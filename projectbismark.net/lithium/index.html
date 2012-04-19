@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lithium: Event-Driven Control for Software-Defined Networks</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../static/style.css"
+    media="all" />
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7029796-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+          'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
+
+<body>
+<body>
+<div id="container">
+    <div class="header">
+        <img id="logo" src="../static/bismark.gif" alt="BISmark logo" />
+        <div id="h1_container">
+            <h1>Lithium:<br />Event-Driven Control for<br />Software-Defined Networks</h1>
+        </div>
+    </div>
+
+<p>
+Lithium is an OpenFlow controller that permits event-driven network
+control.  Event-driven network control makes networks easier to
+manage by automating many tasks that must currently be performed by
+manually modifying low-level, distributed, and complex device
+configuration. 
+</p>
+
+<p>
+Lithium currently supports expression of policy in four domains that inherently
+capture many events: time, user, history, and traffic flow. Lithium can support
+policies that automatically react to a wide range of events, from fluctuations
+in traffic volumes to changes in the time of day. Lithium allows network
+operators to specify network-wide policies in terms of a high-level,
+event-driven policy model, as opposed to configuring individual network
+devices with low-level commands.
+</p>
+
+<p>The user interface that runs on top of Lithium to allow home network
+  users to manage their usage caps is called <em>uCap</em>.
+
+    <h2>Learn more about Lithium</h2>
+
+<p>
+The talk below describes an early version of Lithium (then called
+    Resonance), which was presented at
+    the <a href="http://opennetsummit.org/">Open Network Summit</a> in Fall 
+    2011.  A more recent video will be posted soon.</p>
+
+    <p style="text-align: center">
+
+<iframe width="560" height="315"
+	src="http://www.youtube.com/embed/vn-tCq6ihmQ" frameborder="0"
+	allowfullscreen></iframe>
+
+<!---
+    <object width="425" height="344">
+    <param name="movie"
+    value="http://www.youtube.com/v/irqeFdly-UY&hl=en&fs=1"></param>
+    <param name="allowFullScreen" value="true"></param>
+    <embed src="http://www.youtube.com/v/v3hjp8EEJKs&hl=en&fs=1"
+    type="application/x-shockwave-flash" allowfullscreen="true" width="425"
+    height="344"></embed></object> --->
+    </p>
+
+    <h2>Software</h2>
+
+<p><b>Note:</b> The Lithium controller is in an <i>alpha</i> stage.
+  We are looking for contributors and participants, but we are not
+  providing technical support for it yet.</p>
+
+    <ul>
+      <li>Lithium will be published on Github soon. Contact <a href="http://www.cc.gatech.edu/~hkim368/">Hyojoon Kim</a> for more information.</li>
+    </ul>
+
+    <h2>More Information</h2>
+
+<p>Lithium and uCap are part of the <a href="http://projectbismark.net">BISmark
+project</a>. Lithium and uCap run on top of the BISmark router firmware. 
+<a href="https://github.com/projectbismark/projectbismark/wiki/WNDR3700-Flashing">These
+instructions</a> explain how to flash a BISmark router.</p>
+
+
+	<ul>
+        <li><a href="http://projectbismark.net/faq.html">BISmark FAQs</a></li>
+        <li><a href="http://projectbismark.github.com/">
+	    BISmark Development Portal</a>, a starting point to learn about our
+            code repositories and project management tools.</li>
+        <li><a href="https://github.com/projectbismark/">Project BISmark on Github</a>
+            </li>
+        <li><a href="http://networkdashboard.org">Network Dashboard</a>,
+        a web application showing historical performance data for BISmark users
+        </li>
+        <!--
+        <li><a href="http://projectkermit.blogspot.com/">ProjectKermit Blog</a>
+        (under development) - a front-end for BISmark users</li>
+        -->
+    </ul>
+
+    <h2>Papers</h2>
+    <ul>
+
+      <li><em>"You're Capped!" Understanding the Effects of Bandwidth
+	Caps<br />
+	on Broadband Use in the Home </em><br />
+M. Chetty, R. Banks, A.J. Brush, J. Donner, and R. Grinter<br />
+	<em>ACM CHI</em><br />
+	Austin, Texas, May 2012.[<a href="http://www.cc.gatech.edu/~marshini/files/capped_camera_ready.pdf">.pdf</a>]</li>
+
+        <li> <em>Communicating with Caps: Managing Usage Caps in Home
+        Networks </em><br /> 
+          H. Kim, S. Sundaresan, M. Chetty, N. Feamster, K. Edwards<br />
+        <em>ACM SIGCOMM</em> (Demo session),
+        <br /> Toronto, Ontario, Canada, August 2011. 
+        [<a href="http://conferences.sigcomm.org/sigcomm/2011/papers/sigcomm/p470.pdf">.pdf</a>]
+        <br /> 
+        </li>
+
+	<li>
+	  <em>Don't Configure the Network, Program It! Domain Specific
+	  Languages for Network Systems</em><br />
+	  A. Voellmy, A. Agarwal, P. Hudak, N. Feamster, S. Burnett,
+	  J. Launchbury<br />
+	  Yale Technical Report YALEU/DCS/RR-1432
+	  [<a href="http://www.cs.yale.edu/publications/techreports/tr1432.pdf">.pdf</a>] </li>
+
+        <li> <em>Resonance: Inference-based Dynamic Access Control for
+        Enterprise Networks</em><br /> 
+        A. Nayak, A. Reimers, N. Feamster, R. Clark<br />
+        <em>ACM SIGCOMM Workshop on Research on Enterprise Networks</em>,
+        <br /> Barcelona, Spain, August 2009. 
+        [<a href="http://www.gtnoise.net/papers/2009/nayak:res:wren09.pdf">.pdf</a>]
+        <br /> 
+        </li>
+    </ul>
+
+    <h2>People</h2>
+
+    <ul>
+      <li><a href="http://www.cc.gatech.edu/~hkim368/">Hyojoon Kim</li>
+	<li><a href="http://bebop.cs.yale.edu/~andreas/">Andreas Voellmy</li>
+      <li><a href="http://www.cc.gatech.edu/~sburnett/">Sam Burnett</li>
+        <li><a href="http://www.cc.gatech.edu/~ssundar3/">Srikanth Sundaresan</a></li>
+      <li>Bethany Sumner</li>
+      <li>Boris de Souza</li>
+        <li><a href="http://www.stevewoodrow.com/">
+            Stephen Woodrow</a></li>
+        <li><a href="http://www.cc.gatech.edu/~feamster/">
+            Nick Feamster</a> </li>
+        <li><a href="http://www.cc.gatech.edu/~marshini/">
+            Marshini Chetty</a> </li>
+        <li><a href="http://www.cc.gatech.edu/~keith/">
+            Keith Edwards</a> </li>
+        </ul>
+
+    <p>We are also grateful to many other who are supporting the project
+    through bug fixes, patches, research, and other improvements.  We are
+    indebted to the OpenWRT development team for their continuing support of
+    BISmark.</p>
+
+    <h2>Other Information</h2>
+
+    <ul>
+        <li><a href="http://connectionmanagement.org/">
+            Georgia Tech Networking Blog</a>, 
+            Nick Feamster's blog; some updates here</li>
+        <li><a href="http://www.samknows.com">SamKnows</a>,
+            a partner commercial organization performing similar testing</li>
+        <li><a href="http://www.measurementlab.org">Measurement Lab</a>,
+            a partner hosting measurement servers for BISmark</li>
+    </ul>
+
+    <h2>Funding</h2>
+
+    <p style="text-align: center;">
+        <img height=40 src="../static/google.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="../static/nsf.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="../static/intel.jpg" style="margin: 0 20px 0 20px">
+    </p>
+</div>
+</body>
+</html>
