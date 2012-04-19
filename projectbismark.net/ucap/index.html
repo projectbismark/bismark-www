@@ -5,7 +5,7 @@
 <head>
     <title>uCap: Usage Cap Management for Homes</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="static/style.css"
+    <link rel="stylesheet" type="text/css" href="../static/style.css"
     media="all" />
 
     <script type="text/javascript">
@@ -28,7 +28,7 @@
 <body>
 <div id="container">
     <div class="header">
-        <img id="logo" src="static/bismark.gif" alt="BISmark logo" />
+        <img id="logo" src="../static/bismark.gif" alt="BISmark logo" />
         <div id="h1_container">
             <h1>uCap: Usage Cap Management for Homes</h1>
         </div>
@@ -41,17 +41,21 @@
     data usage caps (capacity) for each device. When a device's data usage reaches its cap, 
     the connection will be blocked by the uCap framework.</p>
 
+    <p>uCap leverages the <a href="http://projectbismark.net/lithium">Lithium OpenFlow
+    Controller</a>, an event-driven controller for software-defined networks.
+    </p>
     <p>uCap is part of the <a href="http://projectbismark.net">BISmark
     project</a>. uCap runs on top of the BISmark router firmware. 
+    </p>
 
     <h2>Learn more about uCap</h2>
 
     <p style="text-align: center;">
-    <img height=300 src="./static/ucap_system.jpeg" style="margin: 0 20px 0 20px">
+    <img height=330 src="./static/ucap_system.jpeg" style="margin: 0 20px 0 20px">
     </p>
 
-    <p><b>Note:</b> uCap is in alpha stage. We are looking for contributors and participants, 
-    but we are not providing technical support for it yet.</p>
+    <p><b>Note:</b> uCap is in <em>alpha</em> stage. We are looking for contributors and 
+    participants, but we are not providing technical support for it yet.</p>
 
     <p>Running uCap is easy! Just follow these steps:</p>
     <ol>
@@ -60,9 +64,12 @@
     project</a> page for more information.
         <li>Plug it into your cable or DSL modem. You can
         simply replace your existing home router with BISmark.</li>
-        <li>Contact the Project BISmark team to opt-in to the uCap experiment.</li>
-        <li>Configure your router to enable uCap package.</li>
-        <li>Manage your network through the
+        <li>Contact the project BISmark team to opt-in to the uCap experiment.</li>
+        <li>Configure your router to enable uCap package. Connect to your router's configuration
+        page by going to <em>"http://192.168.142.1"</em> with your web browser. Check box is under:
+        <br><em>BISmark-->Experiments.</em>
+        </li>
+        <li>Manage your home network through the
         <a href="https://bourbon.gtnoise.net/ucap">uCap management web interface</a>.</li>
     </ol>
 
@@ -116,11 +123,13 @@
             Sam Burnett</a></li>
         <li><a href="http://www.cc.gatech.edu/~ssundar3/">
             Srikanth Sundaresan</a></li>
+        <li><a href="http://www.bdesouza.com/">
+            Boris de Souza</a></li>
+        <li><a href="http://www.bethanysumner.com/">
+            Bethany Sumner</a></li>
         <li><a href="http://www.cc.gatech.edu/~marshini/">
             Marshini Chetty</a></li>
-        <li>Boris de Souza</li>
-        <li>Bethany Sumner</li>
-         <li><a href="http://www.stevewoodrow.com/">
+        <li><a href="http://www.stevewoodrow.com/">
             Stephen Woodrow</a></li>
         <li><a href="http://www.cc.gatech.edu/~feamster/">
             Nick Feamster</a></li>
@@ -151,9 +160,9 @@
     <h2>Funding</h2>
 
     <p style="text-align: center;">
-        <img height=40 src="static/google.jpg" style="margin: 0 20px 0 20px">
-        <img height=40 src="static/nsf.jpg" style="margin: 0 20px 0 20px">
-        <img height=40 src="static/intel.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="../static/google.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="../static/nsf.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="../static/intel.jpg" style="margin: 0 20px 0 20px">
     </p>
 </div>
 <p class="notes">
