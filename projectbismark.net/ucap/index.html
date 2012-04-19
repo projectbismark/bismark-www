@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>uCap: Usage Cap Management for Homes</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="static/style.css"
+    media="all" />
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7029796-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ?
+          'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
+
+<body>
+<body>
+<div id="container">
+    <div class="header">
+        <img id="logo" src="static/bismark.gif" alt="BISmark logo" />
+        <div id="h1_container">
+            <h1>uCap: Usage Cap Management for Homes</h1>
+        </div>
+    </div>
+
+    <p> uCap is a data cap usage management tool for home network users, 
+    which uses OpenFlow and OpenWRT. uCap is implemented on top of the BISMark framework. 
+    uCap passively collects and sends data usage information of each device to the back-end 
+    database. Home users can monitor their data usage through a web browser, and also set 
+    data usage caps (capacity) for each device. When a device's data usage reaches its cap, 
+    the connection will be blocked by the uCap framework.</p>
+
+    <p>uCap is part of the <a href="http://projectbismark.net">BISmark
+    project</a>. uCap runs on top of the BISmark router firmware. 
+
+    <h2>Learn more about uCap</h2>
+
+    <p style="text-align: center;">
+    <img height=300 src="./static/ucap_system.jpeg" style="margin: 0 20px 0 20px">
+    </p>
+
+    <p><b>Note:</b> uCap is in alpha stage. We are looking for contributors and participants, 
+    but we are not providing technical support for it yet.</p>
+
+    <p>Running uCap is easy! Just follow these steps:</p>
+    <ol>
+        <li><b>Get a BISmark Router.</b>
+        Visit the <a href="http://projectbismark.net">BISmark
+    project</a> page for more information.
+        <li>Plug it into your cable or DSL modem. You can
+        simply replace your existing home router with BISmark.</li>
+        <li>Contact the Project BISmark team to opt-in to the uCap experiment.</li>
+        <li>Configure your router to enable uCap package.</li>
+        <li>Manage your network through the
+        <a href="https://bourbon.gtnoise.net/ucap">uCap management web interface</a>.</li>
+    </ol>
+
+    <h2>Software</h2>
+    <ul>
+        <li><a href="https://github.com/bismark-devel">BISmark Github page</a>
+            </li>
+        <li><a href="http://redmine.projectbismark.net">
+            BISmark Developers Site</a>, the BISmark development project
+            management/issue tracker tool.</li>
+        <!--
+        <li><a href="http://projectkermit.blogspot.com/">ProjectKermit Blog</a>
+        (under development) - a front-end for BISmark users</li>
+        -->
+    </ul>
+
+    <h2>Papers and Talks</h2>
+
+    <h3>Talks</h3>
+    <ul>
+        <li> <a
+        href="http://www.youtube.com/embed/vn-tCq6ihmQ">
+        Lithium and uCap</a>.  Overview talk given at 2011 Open Flow summit,
+        2011 along with Lithum.</li>
+    </ul>
+
+    <h3>Papers</h3>
+    <ul>
+        <li><em>"You're Capped!" Understanding the Effects of Bandwidth
+        Caps<br />on Broadband Use in the Home </em><br />
+        M. Chetty, R. Banks, A.J. Brush, J. Donner, and R. Grinter<br />
+        <em>ACM CHI</em><br />
+        Austin, Texas, May 2012.[<a href="http://www.cc.gatech.edu/~marshini/files/capped_camera_ready.pdf">.pdf</a>]</li>
+
+        <li> <em>Communicating with Caps: Managing Usage Caps in Home
+        Networks </em><br /> 
+        H. Kim, S. Sundaresan, M. Chetty, N. Feamster, K. Edwards<br />
+        <em>ACM SIGCOMM</em> (Demo session),
+        <br /> Toronto, Ontario, Canada, August 2011. 
+        [<a href="http://conferences.sigcomm.org/sigcomm/2011/papers/sigcomm/p470.pdf">.pdf</a>]
+        <br /> 
+        </li>
+    </ul>
+
+    <h2>People</h2>
+
+    <ul>
+        <li><a href="http://www.cc.gatech.edu/~hkim368/">
+            Hyojoon Kim</a></li>
+        <li><a href="http://www.cc.gatech.edu/~sburnett/">
+            Sam Burnett</a></li>
+        <li><a href="http://www.cc.gatech.edu/~ssundar3/">
+            Srikanth Sundaresan</a></li>
+        <li><a href="http://www.cc.gatech.edu/~marshini/">
+            Marshini Chetty</a></li>
+        <li>Boris de Souza</li>
+        <li>Bethany Sumner</li>
+         <li><a href="http://www.stevewoodrow.com/">
+            Stephen Woodrow</a></li>
+        <li><a href="http://www.cc.gatech.edu/~feamster/">
+            Nick Feamster</a></li>
+        <li><a href="http://www.cc.gatech.edu/~keith/">
+            Keith Edwards</a></li>
+        </ul>
+
+    <p>We are also grateful to many other <a
+    href="contrib.html">contributors</a> who are supporting the project
+    through bug fixes, patches, research, and other improvements.  We are
+    indebted to the OpenWRT development team for their continuing support of
+    BISmark.</p>
+
+    <h2>Other Information</h2>
+
+    <ul>
+        <li><a href="http://connectionmanagement.org/">
+            Georgia Tech Networking Blog</a>, 
+            Nick Feamster's blog; some updates here</li>
+        <li><a href="http://www.samknows.com">SamKnows</a>,
+            a partner commercial organization performing similar testing</li>
+        <li><a href="http://www.measurementlab.org">Measurement Lab</a>,
+            a partner hosting measurement servers for BISmark</li>
+        <li><a href=" http://www.grid.unina.it/Traffic/">
+            UNINA Network Tools</a></li>
+    </ul>
+
+    <h2>Funding</h2>
+
+    <p style="text-align: center;">
+        <img height=40 src="static/google.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="static/nsf.jpg" style="margin: 0 20px 0 20px">
+        <img height=40 src="static/intel.jpg" style="margin: 0 20px 0 20px">
+    </p>
+</div>
+<p class="notes">
+    <a href="/">Home</a> |
+    <a href="http://networkdashboard.org/">Network Dashboard</a> |
+    <a href="http://about.projectbismark.net/">BISmark</a> |
+    <a href="credits.html">Credits</a> |
+    <a href="http://gtnoise.net/">GTNoise</a>
+</p>
+</body>
+</html>
