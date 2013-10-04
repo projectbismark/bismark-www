@@ -1,0 +1,38 @@
+server {
+	listen 80;
+	server_name downloads.projectbismark.net;
+
+	access_log /var/log/nginx/downloads.projectbismark.net.access.log;
+
+	root /var/www/downloads.projectbismark.net;
+	autoindex on;
+	autoindex_exact_size off;
+
+	# Redirect non-existent experiments directories to a default experiments
+	# directory, which lets us specify experiments for devices we have never
+	# seen before.
+	location ~ ^/(.+?)/(.+?)/experiments-device/(.+?)/(.*)$ {
+		try_files $uri $uri/ /$1/$2/experiments-device/default/$4 =404;
+	}
+}
+
+server {
+	listen 443 ssl;
+	server_name downloads.projectbismark.net;
+
+	ssl_certificate ssl/downloads.projectbismark.net.pem;
+	ssl_certificate_key ssl/downloads.projectbismark.net.key;
+
+	access_log /var/log/nginx/downloads.projectbismark.net:443.access.log;
+
+	root /var/www/downloads.projectbismark.net;
+	autoindex on;
+	autoindex_exact_size off;
+
+	# Redirect non-existent experiments directories to a default experiments
+	# directory, which lets us specify experiments for devices we have never
+	# seen before.
+	location ~ ^/(.+?)/(.+?)/experiments-device/(.+?)/(.*)$ {
+		try_files $uri $uri/ /$1/$2/experiments-device/default/$4 =404;
+	}
+}

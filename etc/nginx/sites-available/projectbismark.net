@@ -1,0 +1,36 @@
+server {
+	listen 80 default_server;
+
+	access_log /var/log/nginx/projectbismark.net.access.log;
+
+	root /var/www/projectbismark.net;
+}
+
+server {
+	listen 443 default_server ssl;
+
+	ssl_certificate ssl/projectbismark-net.crt;
+	ssl_certificate_key ssl/projectbismark-net.key;
+	ssl_client_certificate ssl/gd_bundle.crt;
+
+	access_log /var/log/nginx/projectbismark.net:443.access.log;
+
+	root /var/www/projectbismark.net;
+}
+
+server {
+	listen 8080 ssl;
+	server_name projectbismark.net;
+
+	ssl_certificate ssl/projectbismark-net.crt;
+	ssl_certificate_key ssl/projectbismark-net.key;
+	ssl_client_certificate ssl/gd_bundle.crt;
+	ssl_session_timeout 5m;
+	ssl_protocols SSLv3 TLSv1;
+	ssl_ciphers ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv3:+EXP;
+	ssl_prefer_server_ciphers on;
+
+	access_log /var/log/nginx/projectbismark.net:8080.access.log;
+
+	root /var/www/projectbismark.net:8080;
+}
