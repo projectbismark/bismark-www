@@ -14,6 +14,11 @@ server {
 	location ~ ^/(.+?)/(.+?)/experiments-device/(.+?)/(.*)$ {
 		try_files $uri $uri/ /$1/$2/experiments-device/default/$4 =404;
 	}
+	# Redirect non-existent updates directories to a default updates directory,
+	# which lets us specify updates for devices we have never seen before.
+	location ~ ^/(.+?)/(.+?)/updates-device/(.+?)/(.*)$ {
+		try_files $uri $uri/ /$1/$2/updates-device/default/$4 =404;
+	}
 }
 
 server {
@@ -34,5 +39,10 @@ server {
 	# seen before.
 	location ~ ^/(.+?)/(.+?)/experiments-device/(.+?)/(.*)$ {
 		try_files $uri $uri/ /$1/$2/experiments-device/default/$4 =404;
+	}
+	# Redirect non-existent updates directories to a default updates directory,
+	# which lets us specify updates for devices we have never seen before.
+	location ~ ^/(.+?)/(.+?)/updates-device/(.+?)/(.*)$ {
+		try_files $uri $uri/ /$1/$2/updates-device/default/$4 =404;
 	}
 }
